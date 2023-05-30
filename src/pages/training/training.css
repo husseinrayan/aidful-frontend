@@ -1,0 +1,98 @@
+.training {
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.training-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 80px;
+  padding-bottom: 140px;
+}
+
+.training-card {
+  width: 500px;
+  height: 300px;
+  transition: 0.5s ease;
+  margin-top: 40px;
+}
+
+.training-card:hover .training-card-desc {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px #99999991;
+}
+
+.training-card:hover {
+  transform: translateY(-60px);
+  padding-bottom: 60px;
+}
+
+.training-card:hover img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.training-card-img {
+  width: 100%;
+  height: 100%;
+}
+
+.training-card-img img {
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.training-card-desc {
+  width: 100%;
+  height: 200px;
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transform: translateY(-200px);
+  position: relative;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+
+.training-card-desc h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.training-card-desc p {
+  font-size: 1.1rem;
+}
+
+.main-hero-section {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../images/image3.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(50%);
+}
+
+.main-hero-section h2 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+}

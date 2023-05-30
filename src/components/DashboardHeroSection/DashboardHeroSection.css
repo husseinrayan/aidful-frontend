@@ -1,0 +1,24 @@
+.dashboard-hero-section {
+  /* background-image: url("../../images/RMZNA-user-login-page.png.png"); */
+ background-color: aliceblue;
+  background-size: contain;
+  height: 282px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-hero-section h2 {
+  background-color: var(--secondary-color);
+  font-size: 4rem;
+  padding: 15px;
+  border-radius: 10px;
+  color: var(--accent-color);
+}
+
+@media (max-width: 480px) {
+  .dashboard-hero-section h2 {
+    font-size: 3rem;
+  }
+}

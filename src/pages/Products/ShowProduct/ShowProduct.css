@@ -1,0 +1,120 @@
+
+.main-show-product{
+    height: 90vh;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-show-product{
+    position: relative;
+    height: 60vh;
+    width: 80rem;
+    border: 2px solid rgb(158, 62, 62);
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.info-show-product{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(158, 62, 62);
+
+}
+.image-show-product{
+    background-image: url("../../../images/img1.jpg");
+    background-size: cover;   
+    width:50% ;
+    height:100%;
+    border-radius: 0 10px 10px 0;
+    
+}
+.price-cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.cart-button-show-product{
+    color: rgb(158, 62, 62);
+    width: 2rem;
+    height: 2rem;
+}
+
+.cart-button-show-product:hover {
+    cursor: pointer;
+}
+
+.price-cart span{
+    font-weight: 700;
+}
+
+.info-show-product p{
+    font-weight: 500;
+}
+
+.cancel-show-product {
+    width: 2rem;
+    height: 2rem;
+    color: rgb(158, 62, 62);
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+.cancel-show-product:hover{
+    cursor: pointer;
+}
+
+@media(max-width : 992px){
+.card-show-product{
+
+    min-width: 80%;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content: space-between; */
+}
+
+.image-show-product{
+    width:100% ;
+    height:50%;
+}
+
+.info-show-product{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.card-show-product{
+    height: 90%;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.cancel-show-product {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    color: rgb(158, 62, 62);
+    top: 0.1rem;
+    left: 0.1rem    ;
+
+
+}
+
+}

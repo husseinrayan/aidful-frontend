@@ -1,0 +1,12 @@
+.global-text-field {
+  border: 1px solid #444;
+  outline: none;
+  border-radius: 4px;
+  padding: 16.5px 14px;
+  position: relative;
+  caret-color: var(--accent-color);
+}
+
+.global-text-field:focus {
+  outline: 2px solid var(--secondary-color);
+}

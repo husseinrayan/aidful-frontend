@@ -1,0 +1,77 @@
+.admin-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-image: url("../../images/RMZNA-user-login-page.png.png"); */
+  position: relative;
+  background-color:#55A8C0 ;
+}
+
+.admin-login-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+}
+
+.admin-login-container {
+  background-color: #fff;
+  width: 500px;
+  height: 600px;
+  padding: 0 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px #4444449f;
+  position: relative;
+  z-index: 9999;
+}
+
+.admin-login-logo {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.admin-login-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  font-weight: 400;
+}
+
+.admin-login-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.admin-login-form div {
+  width: 100%;
+}
+
+.admin-login-page-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .admin-login-container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-login-container {
+    width: 350px;
+  }
+}

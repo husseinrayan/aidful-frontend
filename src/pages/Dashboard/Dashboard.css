@@ -1,0 +1,50 @@
+.main-dashboard {
+  display: flex;
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+}
+
+.dashboard-pages {
+  /* margin-left: 100px; */
+  padding-left: 100px;
+  /* margin-top: 110px; */
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: onLoadAnimation 0.5s ease;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-pages {
+    padding-left: 0;
+  }
+}
+
+@keyframes onLoadAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes onLoad {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.onLoad {
+  animation: onLoad 0.5s ease;
+}

@@ -1,0 +1,115 @@
+.user-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color:#55A8C0;;
+  position: relative;
+  z-index: 1;
+}
+
+.user-login-background-effect-left {
+  position: absolute;
+  top: 0;
+  left: 6%;
+  z-index: -1;
+  width: 400px;
+  height: 100vh;
+  /* background-image: url("../../images/RMZNA-user-login-page.png.png"); */
+}
+
+.user-login-page-container {
+  width: 75%;
+  height: 650px;
+  /* background-color: var(--primary-color); */
+  background-color: #fef1ce;
+
+  border-radius: 20px;
+  box-shadow: 0 4px 15px #888;
+  display: flex;
+  overflow: hidden;
+}
+
+.user-login-page-image {
+  width: 55%;
+  height: 116%;
+  background: url("../../images/header-logo3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.user-login-page-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px;
+}
+
+.user-login-page-title {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: var(--accent-color);
+}
+
+.user-login-page-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.user-login-page-inputs input {
+  width: 100%;
+}
+
+.user-login-page-signup-nav {
+  color: #444;
+  cursor: pointer;
+}
+
+.user-login-page-signup-nav:hover {
+  color: var(--accent-color);
+}
+
+.user-login-page-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.user-login-page-buttons {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .user-login-page-image {
+    display: none;
+  }
+
+  .user-login-page-form {
+    width: 100%;
+    padding: 60px;
+  }
+
+  .user-login-background-effect-left {
+    width: 350px;
+  }
+
+  .user-login-page-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-login-page-form {
+    padding: 60px 30px;
+  }
+}
+
+.user-login-page-address-phone {
+  display: flex;
+  gap: 10px;
+}

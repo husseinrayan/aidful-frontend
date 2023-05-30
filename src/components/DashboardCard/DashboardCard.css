@@ -1,0 +1,38 @@
+.admin-count-card {
+  width: 300px;
+  /* background-color: var(--accent-color); */
+  background-color: #55A8C0;
+
+  height: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--secondary-color);
+  position: relative;
+  border: 1px solid var(--secondary-color);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.admin-count-card:hover {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.admin-count-card:hover p::after {
+  background-image: url("../../images/RMZNA-text-bg.png");
+}
+
+.admin-count-card p::after {
+  content: attr(data-admins-count);
+  position: absolute;
+  top: -5px;
+  right: 0;
+  font-size: 10rem;
+  /* color: var(--secondary-color); */
+  font-weight: 600;
+  background: url("../../images/RMZNA-user-login-page.png.png");
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  transition: 0.5s;
+}

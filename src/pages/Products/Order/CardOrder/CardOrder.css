@@ -1,0 +1,70 @@
+
+
+.main-card-order {
+    margin-top: 50px;
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+      /* background-color: rgb(158, 62, 62); 
+  background-image: linear-gradient(rgb(158, 62, 62), #fef1ce); */
+  /* background-color: #fef1fe; */
+  background: linear-gradient(135deg,rgb(158, 62, 62)80%  ,#fef1fe );
+  align-items: center;
+  border-radius: 15px;
+  position: relative;
+}
+
+.image{
+    background-image: url("../../../../images//img1.jpg");
+    width: 6rem;
+    height: 80%;
+    background-size: cover;
+    border-radius: 15px;
+    border: 2px solid #fef1fe;
+}
+
+
+.info-product {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.delete {
+    width: 3rem;
+    height: 40%;
+}
+.delete:hover {
+    cursor: pointer;
+}
+
+.confirme {
+    height: 5vh;
+    width: 20%;
+    margin-bottom:10px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: red;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    padding-top: 15px;
+    margin-right: 0px;
+}
+@media(max-width : 992px){
+    .info-product {
+        display: block;
+        margin-right: 50px;
+    }
+    .delete {
+        width: 1rem;
+        height: 2rem;
+        position: absolute;
+        top: 0px;
+        right: 5px;
+    }
+}
