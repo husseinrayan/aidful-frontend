@@ -18,7 +18,7 @@ function HomePage() {
   const getProducts = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5001/api/product?limit=3`
+        `https://aidfull-app-api.onrender.com/api/product?limit=3`
       );
       console.log(response);
       setProductData(response.data.items);
@@ -140,7 +140,7 @@ function HomePage() {
             {productData.map((product) => (
               <Card
                 key={product.id}
-                image={`https://aidfull-web.onrender.com/uploads/${product.image}`}
+                image={`https://aidfull-app-api.onrender.com/uploads/${product.image}`}
                 name={product.name}
 
                 // price={product.price}

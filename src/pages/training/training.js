@@ -43,8 +43,8 @@ const Training = () => {
               <div className="training-card" key={training._id}>
                 <div className="training-card-img">
                   <img
-                    src={`https://aidfull-app-api.onrender.com${training.image}`}
-                    alt="training card image"
+                src={`https://aidfull-app-api.onrender.com/uploads/${training.image}`}
+                    alt="training card"
                     width="100%"
                     height="100%"
                     style={{ objectFit: "cover" }}
