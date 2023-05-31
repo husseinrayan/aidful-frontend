@@ -140,7 +140,7 @@ function HomePage() {
             {productData.map((product) => (
               <Card
                 key={product.id}
-                image={`http://localhost:5001/uploads/${product.image}`}
+                image={`https://aidfull-web.onrender.com/uploads/${product.image}`}
                 name={product.name}
 
                 // price={product.price}

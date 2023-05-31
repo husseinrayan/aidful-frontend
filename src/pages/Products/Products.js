@@ -153,7 +153,7 @@ const Products = () => {
   const setIsTaken = async (id) => {
     try {
       const response = await axios.patch(
-        `http://localhost:5001/api/product/isTaken/${id}`,
+        `https://aidfull-web.onrender.com/api/product/isTaken/${id}`,
         { isTaken: true }
       );
       console.log(response);
@@ -166,7 +166,7 @@ const Products = () => {
   const setIsNotTaken = async (id) => {
     try {
       const response = await axios.patch(
-        `http://localhost:5001/api/product/isTaken/${id}`,
+        `https://aidfull-web.onrender.com/api/product/isTaken/${id}`,
         { isTaken: false }
       );
       console.log(response);
@@ -203,7 +203,7 @@ const Products = () => {
           <div className="products">
             {products.map((element) => (
               <Card
-                image={`http://localhost:5001/uploads/${element.image}`}
+                image={`https://aidfull-web.onrender.com/uploads/${element.image}`}
                 name={element.name}
                 description={element.description}
                 category={element.category.name}
