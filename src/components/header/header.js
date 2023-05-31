@@ -368,8 +368,9 @@ const HeaderPage = (props) => {
               </NavLink>
             </li>
             <li>
+              {/* nkmkmkm */}
               <NavLink
-              
+
                 className="link"
                 to="/training"
                 href="#hero"
