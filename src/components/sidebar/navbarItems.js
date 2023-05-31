@@ -17,24 +17,24 @@ export const mainNavbarItems = [
     label: "Admins",
     route: "dashboard-admins",
   },
-  {
-    id: 2,
-    icon: <LocalShippingRoundedIcon />,
-    label: "Orders",
-    route: "dashboard-orders",
-  },
+  // {
+  //   id: 2,
+  //   icon: <LocalShippingRoundedIcon />,
+  //   label: "Orders",
+  //   route: "dashboard-orders",
+  // },
   {
     id: 3,
     icon: <LocalMallRoundedIcon />,
     label: "Products",
     route: "dashboard-products",
   },
-  {
-    id: 4,
-    icon: <FitnessCenterRoundedIcon />,
-    label: "Trainings",
-    route: "dashboard-trainings",
-  },
+  // {
+  //   id: 4,
+  //   icon: <FitnessCenterRoundedIcon />,
+  //   label: "Donations",
+  //   route: "dashboard-trainings",
+  // },
   {
     id: 5,
     icon: <CategoryRoundedIcon />,

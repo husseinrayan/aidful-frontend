@@ -9,8 +9,8 @@
 .category-item {
   margin-right: 1rem;
   margin-top: 1rem;
-  background-color: rgb(158, 62, 62);
-  border: 2px solid rgb(158, 62, 62);
+  background-color: #b7d784;
+  border: 1px solid black;
   color: white;
   padding: 7px 12px;
   border-radius: 15px;
@@ -18,7 +18,7 @@
 
 .category-item:hover {
   cursor: pointer;
-  color: rgb(158, 62, 62);
+  color:  #b7d784;
   background-color: white;
 }
 .product-container {
@@ -63,8 +63,8 @@
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 35px;
-  border: 2px solid rgb(158, 62, 62);
-  background-color: rgb(158, 62, 62);
+  border: 2px solid black;
+  background-color: #b7d784;
   color: white;
   font-weight: 600;
 }

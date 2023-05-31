@@ -35,16 +35,16 @@ function DashboardHome() {
 
   const users = countUsers;
   const products = countProducts;
-  const Donate = countOrders;
+  // const Donate = countOrders;
   const Donations = countTrainings;
 
   const data = {
-    labels: ["Users", "Products", "Donate", "Donations"],
+    labels: ["Users", "Products", "Donations"],
     datasets: [
       {
         // label: "# of Votes",
-        data: [users, products, Donate, Donations],
-        backgroundColor: ["#b7d799", "#55bbbc", "#b7d784", "#b7d732"],
+        data: [users, products, Donations],
+        backgroundColor: ["#b7d799", "#55bbbc", "#b7d732"],
         borderWidth: 1,
       },
     ],
@@ -82,11 +82,11 @@ function DashboardHome() {
         data: labels.map(() => products),
         backgroundColor: "#55bbbc",
       },
-      {
-        label: "Donate",
-        data: labels.map(() => Donate),
-        backgroundColor: "#b7d784",
-      },
+      // {
+      //   label: "Donate",
+      //   data: labels.map(() => Donate),
+      //   backgroundColor: "#b7d784",
+      // },
       {
         label: "Donations",
         data: labels.map(() => Donations),
@@ -160,12 +160,12 @@ function DashboardHome() {
           onClick={() => navigate("/dashboard-products")}
           style={{ flexGrow: 1 }}
         />
-        <DashboardCard
+        {/* <DashboardCard
           title="Donate"
           dataCount={countOrders}
           onClick={() => navigate("/dashboard-orders")}
           style={{ flexGrow: 1 }}
-        />
+        /> */}
         <DashboardCard
           title="Donations"
           dataCount={countTrainings}

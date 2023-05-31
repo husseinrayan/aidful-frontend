@@ -203,12 +203,13 @@ const Products = () => {
           <div className="products">
             {products.map((element) => (
               <Card
-                image={`${process.env.REACT_APP_API_IMAGES}/uploads/${element.image}`}
+                image={`http://localhost:5001/uploads/${element.image}`}
                 name={element.name}
                 description={element.description}
                 category={element.category.name}
                 key={element._id}
                 id={element._id}
+
                 addProducts={handleAddProducts}
                 show={handleShowProduct}
                 onClickTake={() => setIsTaken(element._id)}

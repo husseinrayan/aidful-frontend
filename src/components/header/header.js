@@ -375,7 +375,7 @@ const HeaderPage = (props) => {
                 onClick={handelMenuHidden}
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-                Training
+               Donation
               </NavLink>
             </li>
             <li>
