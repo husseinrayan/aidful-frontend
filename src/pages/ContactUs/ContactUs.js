@@ -27,21 +27,49 @@ const ContactUs = () => {
     setData({ ...data, [name]: value });
   };
 
-  useEffect(() => {
-    if (!isSubmitting) {
-      return;
-    }
 
-    const timer = setTimeout(() => {
-      setData({
-        email: "",
-        name: "",
-        message: "",
-      });
-    }, 3000);
+ const handleSubmit = () => {
+     
+            emailjs
+                .send(
+                    "service_wmgross",
+                    "template_xwg1yza",
+                    data,
+                    "9OjDgZm0R8Ay3HZNj"
+                )
+                .then(
+                    (response) => {
+                        // Swal({
+                        //     title: 'Success',
+                        //     text: 'The Report was sent successfully!',
+                        //     icon: 'success',
+                        // });
+                        // alert('send it succesfull')
+                        console.log(response);
+                    },
+                    (error) => {
+                        // Swal({
+                        //     title: 'Error',
+                        //     text: 'There was an error sending the email. Please try again later.',
+                        //     icon: 'error',
+                        // });
+                        console.log(error);
+                    }
+                );
+       
+    };
 
-    return () => clearTimeout(timer);
-  }, [isSubmitting, data]);
+
+  //   const timer = setTimeout(() => {
+  //     setData({
+  //       email: "",
+  //       name: "",
+  //       message: "",
+  //     });
+  //   }, 3000);
+
+  //   return () => clearTimeout(timer);
+  // }, [isSubmitting, data]);
 
   return (
     <div className="contact-us-page-container">
@@ -50,8 +78,7 @@ const ContactUs = () => {
       </div>
       <div className="contact-us-container">
         <div className="contact-us-form-container">
-          <form 
-          // ref={form} onSubmit={sendEmail}
+          <
           >
             <fieldset>
               <legend>Contact Us</legend>
@@ -90,19 +117,20 @@ const ContactUs = () => {
                   onChange={handleChange}
                   placeholder="Your Message"
                   value={data.message}
+                  
                 />
               </div>
             </fieldset>
             <div className="contact-us-form-submit-btn">
               <button
                 type="submit"
-                disabled={isSubmitting}
+                onClick={handleSubmit}
                 className="contact-us-page-submit-button"
               >
                 {isSubmitting ? "Sending..." : "Send"}
               </button>
             </div>
-          </form>
+          </>
         </div>
         <div className="get-in-touch">
           <h2>Get in touch!</h2>

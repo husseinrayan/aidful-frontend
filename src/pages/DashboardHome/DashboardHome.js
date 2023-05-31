@@ -44,7 +44,7 @@ function DashboardHome() {
       {
         // label: "# of Votes",
         data: [users, products, Donate, Donations],
-        backgroundColor: ["#55a", "#55bbbc", "#669bbc", "#55cb"],
+        backgroundColor: ["#b7d799", "#55bbbc", "#b7d784", "#b7d732"],
         borderWidth: 1,
       },
     ],
@@ -75,7 +75,7 @@ function DashboardHome() {
       {
         label: "Users",
         data: labels.map(() => users),
-        backgroundColor: "#55a",
+        backgroundColor: "#b7d799",
       },
       {
         label: "Products",
@@ -85,12 +85,12 @@ function DashboardHome() {
       {
         label: "Donate",
         data: labels.map(() => Donate),
-        backgroundColor: "#669bbc",
+        backgroundColor: "#b7d784",
       },
       {
         label: "Donations",
         data: labels.map(() => Donations),
-        backgroundColor: "#55cb",
+        backgroundColor: "#b7d732",
       },
     ],
   };

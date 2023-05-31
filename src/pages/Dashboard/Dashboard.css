@@ -1,6 +1,6 @@
 .main-dashboard {
   display: flex;
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
   min-height: 100vh;
 }
 

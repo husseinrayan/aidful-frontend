@@ -10,7 +10,8 @@ import MainButton from "../../components/button/button";
 import Swal from "sweetalert2";
 import DashboardHeroSection from "../../components/DashboardHeroSection/DashboardHeroSection";
 import DashboardPopUp from "../../components/DashboardPopUp/DashboardPopUp";
-
+// import { FontAwesomeIcon } from "@fortawesome/";
+// import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 function DashboardAdmins() {
   const [data, setData] = useState([]);
   const [totalItems, setTotalItems] = useState(0);

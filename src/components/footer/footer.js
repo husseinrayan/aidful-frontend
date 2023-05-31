@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import RMZNA from "../../../src/images/header-logo3.png";
+import RMZNA from "../../../src/images/aidful.png";
 import { NavLink } from "react-router-dom";
 import {
   FaFacebookF,

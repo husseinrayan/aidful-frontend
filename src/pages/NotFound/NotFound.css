@@ -19,7 +19,7 @@
   font-weight: 900;
   background: url("../../images/RMZNA-text-bg.png");
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
 }
 
 .not-found-heading {

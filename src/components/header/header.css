@@ -2,31 +2,25 @@
   top: 0;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 101;
   transition: 0.5s;
 }
 .wrapp {
+  background:#b7d784;
   top: 0;
-  background-color:#55A8C0;
   height: 10vh;
+  padding: 0 50px;
   /* border-bottom: 2px solid rgb(109, 18, 18); */
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.logo-search {
-  margin-left: px;
-  width: 18%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .search-bare {
   border: none;
   border-bottom: 2px solid rgb(167, 81, 81);
   background-color: #fef1ce;
-  color: #711220;
+  color:#31302c;
   width: 250px;
 }
 .search-bare:focus {
@@ -37,13 +31,11 @@
 .header-logo {
   width: 7rem;
   height: 6rem;
-  margin-left: -140px;
   margin-top: 7px;
 }
 
 .list {
   /* border: 2px solid red; */
-  width: 20%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,14 +47,15 @@
   text-decoration: none;
   padding: 2px;
   border-radius: 2px;
-  font-size: 1.3rem;
+  font-size: 16px;
   font-weight: bold;
-  color: rgb(167, 81, 81);
+  /* color: rgb(167, 81, 81); */
+  color: #31302c;
   margin-right: 60px;
 }
 
 .link:hover {
-  color: rgb(232, 223, 223);
+  color:white;
 }
 
 .center-space {
@@ -80,7 +73,7 @@
   /* width: 40px;
     height: 40px; */
   /* background-color: red; */
-  color: rgb(109, 18, 18);
+  color:#31302c;
   margin-right: 20px;
   width: 1.9rem;
   height: 1.9rem;
@@ -94,7 +87,7 @@
   width: 9px;
   height: 9px;
   border-radius: 45%;
-  background-color: red;
+  /* background-color: red; */
   top: 0;
   right: 0;
   position: absolute;
@@ -104,7 +97,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-image: url("../../images/RMZNA-user-login-background.png");
+  /* background-image: url("../../images/RMZNA-user-login-background.png"); */
   background-size: cover;
   width: 10%;
   height: 9.7vh;
@@ -114,7 +107,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../images/RMZNA-user-login-background.png");
+  /* background-image: url("../../images/RMZNA-user-login-background.png"); */
   background-size: cover;
   width: 10%;
   height: 9.8vh;
@@ -153,7 +146,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-color);
-  top: 85px;
+  top: 40px;
   animation: dropdown_menu_animation 0.5s ease;
   display: none;
 }
@@ -211,7 +204,7 @@
   }
 
   .toggle_btn {
-    color: rgb(167, 81, 81);
+    color: #fef1ce;
     font-size: 1.5rem;
     cursor: pointer;
     display: block;
@@ -246,9 +239,9 @@
   margin-left: -20px;
 }
 
-.icon-search {
+/* .icon-search {
   color: rgb(158 ,62,62 );
-}
+} */
 
 .header-login {
   position: relative;
@@ -265,7 +258,7 @@
 
 .header-login-dropdown {
   position: absolute;
-  top: 88px;
+  top: 100%;
   left: 0;
   display: none;
   flex-direction: column;

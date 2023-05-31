@@ -206,24 +206,8 @@ const HeaderPage = (props) => {
     <div className={`holl-header ${isScrolled ? "shadow" : ""}`}>
       <div className="wrapp">
         {/* <div className="left-space"></div> */}
-        <div className="logo-search">
           <img className="header-logo" src={logo} width="2rem" height="2rem" />
-          {/* <div className="search-icon_search">
-            <input
-              className="search-bare"
-              placeholder="search..."
-              onFocus={HandleGetNameProducts}
-              value={inputValue}
-              onChange={handleInputChange}
-            ></input>
-            <NavLink to="/products">
-              <FaSearchengin
-                className="icon-search"
-                onClick={handleButtonClick}
-              />
-            </NavLink>
-          </div> */}
-        </div>
+        
 
         <ul className="list">
           <li>

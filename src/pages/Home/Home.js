@@ -69,6 +69,10 @@ function HomePage() {
 
   return (
     <div className="home">
+      <div className="sub-home">
+
+      </div>
+      <div className="hero-text"><h1>Have something you want to donate we are here to help make sure it reaches the right person</h1></div>
       <Carousel
         className="carousel"
         responsive={responsive}
@@ -111,7 +115,7 @@ function HomePage() {
         <About />
         <div
           style={{
-            background: "var(--secondary-color)",
+            // background: "var(--secondary-color)",
             padding: "40px 0",
             display: "flex",
             flexDirection: "column",

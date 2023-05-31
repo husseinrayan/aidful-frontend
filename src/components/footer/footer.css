@@ -3,9 +3,9 @@
 }
 
 .footer {
-  background-color: #55A8C0;
+  background-color: #b7d784;
   /* background-color: #c35cf2; */
-  color: var(--secondary-color);
+  color:#222;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -42,7 +42,7 @@
 .footer-logo img {
   width: 200px;
   margin-top: -59px;
-  margin-bottom: -30px;
+  margin-bottom: 33px;
 }
 
 .logo-text {

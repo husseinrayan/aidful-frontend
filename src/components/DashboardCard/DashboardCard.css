@@ -1,7 +1,7 @@
 .admin-count-card {
   width: 300px;
   /* background-color: var(--accent-color); */
-  background-color: #55A8C0;
+  background-color: #b7d784;
 
   height: 150px;
   border-radius: 10px;
@@ -14,7 +14,7 @@
 }
 
 .admin-count-card:hover {
-  background-color: var(--secondary-color);
+  background-color: white;
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
