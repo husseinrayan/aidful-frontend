@@ -195,7 +195,10 @@
   .carousel-title h2 {
     font-size: 2em;
   }
-
+.carousel-title{
+  margin-top: -10%;
+ 
+}
   .carousel-title p {
     font-size: 1rem;
   }
@@ -305,6 +308,41 @@ body {
   align-items: center;
   height: 700px;
   /* height: auto; */
+}
+.hero-text {
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .hero-text {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 1640px) {

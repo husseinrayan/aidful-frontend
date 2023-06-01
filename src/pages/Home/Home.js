@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Home.css";
-import image1 from "../../images/rayan.jpeg";
-import image7 from "../../images/image.webp";
-import image14 from "../../images/image3.png";
+import image1 from "../../images/r1.jpg";
+import image7 from "../../images/r3.jpg";
+import image14 from "../../images/r2.jpg";
 import Training from "./training.js";
 import About from "./about.js";
 import Card from "../Products/Card/Card";
@@ -72,7 +72,7 @@ function HomePage() {
       <div className="sub-home">
 
       </div>
-      <div className="hero-text"><h1>Have something you want to donate we are here to help make sure it reaches the right person</h1></div>
+      {/* <div className="hero-text"><h1>Have something you want to donate we are here to help make sure it reaches the right person</h1></div> */}
       <Carousel
         className="carousel"
         responsive={responsive}
@@ -90,6 +90,9 @@ function HomePage() {
             width="100%"
             height="100%"
           />
+           <div className="carousel-title"><h2>Have something you want to donate</h2>
+           <p> we are here to help make sure it reaches the right person
+            </p></div>
         </div>
         <div className="carousel__item">
           <img
@@ -99,6 +102,9 @@ function HomePage() {
             width="100%"
             height="100%"
           />
+           <div className="carousel-title"><h2>Have something you want to donate</h2>
+           <p> we are here to help make sure it reaches the right person
+            </p></div>
         </div>
         <div className="carousel__item">
           <img
@@ -108,6 +114,9 @@ function HomePage() {
             width="100%"
             height="100%"
           />
+           <div className="carousel-title"><h2>Have something you want to donate</h2>
+           <p> we are here to help make sure it reaches the right person
+            </p></div>
         </div>
       </Carousel>
 
