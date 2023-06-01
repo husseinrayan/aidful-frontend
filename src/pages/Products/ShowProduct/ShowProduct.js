@@ -23,7 +23,7 @@ if(localStorage.idProduct !== undefined){
 
     return (
       <div>
-        <div className="main-show-product">
+        {/* <div className="main-show-product">
           <div className="card-show-product">
             <FaRegTimesCircle
               className="cancel-show-product"
@@ -45,8 +45,8 @@ if(localStorage.idProduct !== undefined){
               src={`${process.env.REACT_APP_API_IMAGES}/${dataProduct.image}`}
               className="image-show-product"
             ></img>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
     );
 }

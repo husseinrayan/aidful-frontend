@@ -10,29 +10,34 @@ import MainButton from "../../components/button/button";
 import Swal from "sweetalert2";
 import DashboardHeroSection from "../../components/DashboardHeroSection/DashboardHeroSection";
 import DashboardPopUp from "../../components/DashboardPopUp/DashboardPopUp";
-import "./DashboardProducts.css";
 import Spinner from "../../components/spinner/spinner";
+import Cookies from "js-cookie";
 
 function DashboardProducts() {
+    const USER_ID = Cookies.get('user-id')
   const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([])
   const [totalItems, setTotalItems] = useState(0);
   const [page, setPage] = useState(0);
   const [perPage, setPerPage] = useState(25);
   const [isLoading, setIsLoading] = useState(false);
+  const [userId, setUserId] = useState(USER_ID)
   const [productAddData, setProductAddData] = useState({
     name: "",
     description: "",
     image: null,
-    // price: "",
+    price: "",
     category: [],
+    user: userId
   });
 
   const [productEditData, setProductEditData] = useState({
     name: "",
     description: "",
     image: null,
-    // price: "",
+    price: "",
     category: "",
+    user: userId
   });
   const [isEdit, setIsEdit] = useState(false);
 
@@ -76,7 +81,7 @@ function DashboardProducts() {
     },
     { field: "name", headerName: "Name", width: 200 },
     { field: "description", headerName: "Description", width: 300 },
-    // { field: "price", headerName: "Price", width: 60 },
+    { field: "price", headerName: "Price", width: 60 },
     {
       field: "category",
       headerName: "Category",
@@ -134,6 +139,14 @@ function DashboardProducts() {
   useEffect(() => {
     getProducts();
     getCategories();
+
+    const userId = Cookies.get('user-id')
+    setUserId(userId)
+    const filteredProducts = data.filter((prod) => 
+        prod.user._id === userId   
+    )
+    setFilteredData(filteredProducts)
+
   }, []);
 
   const handleFormChange = (event) => {
@@ -162,9 +175,10 @@ function DashboardProducts() {
     const productAddForm = new FormData();
     productAddForm.append("name", productAddData.name);
     productAddForm.append("description", productAddData.description);
-    // productAddForm.append("price", productAddData.price);
+    productAddForm.append("price", productAddData.price);
     productAddForm.append("image", productAddData.image);
     productAddForm.append("category", productAddData.category._id);
+    productAddForm.append("user", productAddData.user);
 
     try {
       const response = await axios.post(
@@ -208,9 +222,11 @@ function DashboardProducts() {
     const productEditForm = new FormData();
     productEditForm.append("name", productEditData.name);
     productEditForm.append("description", productEditData.description);
-    // productEditForm.append("price", productEditData.price);
+    productEditForm.append("price", productEditData.price);
     productEditForm.append("image", productEditData.image);
     productEditForm.append("category", productEditData.category._id);
+    productEditForm.append("user", productEditData.user);
+
 
     try {
       const response = await axios.put(
@@ -297,6 +313,7 @@ function DashboardProducts() {
 
   return (
     <div className="dashboard-admins onLoad">
+        {console.log(filteredData)}
       <DashboardHeroSection title="Products" />
       {openPopup && (
         <DashboardPopUp
@@ -341,12 +358,12 @@ function DashboardProducts() {
           </div>
           <div>
             <TextField
-              // label="price"
+              label="price"
               type="number"
               style={{ width: "100%", fontSize: "1rem" }}
-              // name="price"
+              name="price"
               onChange={isEdit ? handleEditChange : handleFormChange}
-              // value={isEdit ? productEditData.price : productAddData.price}
+              value={isEdit ? productEditData.price : productAddData.price}
             />
           </div>
           <div>

@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
-import logo from "../../images/header-logo3.png";
-import { NavLink } from "react-router-dom";
+import logo from "../../images/aidful.png";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   FaSearchengin,
   FaCartPlus,
@@ -19,6 +19,7 @@ import MainButton from "../button/button";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 
 const HeaderPage = (props) => {
+  const navigate = useNavigate()
   const isUserAuthenticated = Cookies.get("user-token");
   const isAdminAuthenticated = Cookies.get("admin-token");
 
@@ -182,10 +183,9 @@ const HeaderPage = (props) => {
     }
 
     const filteredProducts = products.filter(
-      (product) => product.user._id === userId
+      (product) => product.isTaken === true
     );
     setFilteredProducts(filteredProducts);
-    console.log(filteredProducts);
   }, [userId, products]);
 
   const getProducts = async () => {
@@ -204,6 +204,7 @@ const HeaderPage = (props) => {
 
   return (
     <div className={`holl-header ${isScrolled ? "shadow" : ""}`}>
+      {console.log(filteredProducts)}
       <div className="wrapp">
         {/* <div className="left-space"></div> */}
           <img className="header-logo" src={logo} width="2rem" height="2rem" />
@@ -489,6 +490,9 @@ const HeaderPage = (props) => {
               <span>{prod.category[0].name}</span>
             </div>
           ))}
+          <div>
+            <button onClick={() => navigate('/add-posts')}>Add Post</button>
+          </div>
         </DashboardPopUp>
       )}
     </div>

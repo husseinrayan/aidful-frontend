@@ -18,24 +18,21 @@ function Training() {
         <div className="training-text">
           <div>
             <p className="training">
-              RMZNA is a distinguished Palestinian Hand Embroidery Brand that
-              proudly showcases the rich cultural heritage of Palestine through
-              its personalized and modern designs. While keeping true to
-              traditional embroidery techniques, RMZNA intertwines the struggles
-              and identity of Palestine within each piece, creating a powerful
-              narrative that pays homage to the past while propelling towards
-              the future. Through cross-stitched motifs and intricate designs,
-              RMZNA shares the compelling story of Palestinian culture and its
-              deep-rooted connection to the land and people. With a focus on
-              attention to detail and quality, each piece is lovingly crafted to
-              tell a unique story. As a brand, RMZNA is committed to keeping
-              Palestinian heritage alive by introducing it to the modern fashion
-              world. Through the use of contemporary fashion styles and
-              innovative design concepts, RMZNA invites people from all over the
-              world to embrace and wear the Palestinian identity with pride.
-              Overall, RMZNA's dedication to the preservation of Palestinian
-              culture and identity through its hand-embroidered designs is a
-              true testament to its commitment to excellence and creativity.
+            Your contribution can make a difference in someone's life.
+    Donate today and help us create positive change in our community.
+    Together, we can build a brighter future through your generous support.
+    By donating, you can help provide essential resources to those in need.
+    Your generosity can transform lives and inspire hope.
+    Every donation counts, no matter how big or small.
+    Join us in our mission to make a meaningful impact through your contribution.
+    With your support, we can make a lasting difference in the lives of countless individuals.
+    Your donation will directly support our efforts to create a better world.
+    Together, let's empower those who are less fortunate and create a more equitable society.
+    Your kindness can bring joy and relief to those facing difficult circumstances.
+    Donate today and be a catalyst for positive change in our community.
+   Your financial support can help us continue our vital work and reach even more people in need.
+
+Please let me know if you need any further assistance or if there's anything else I can help you with!
             </p>
             {/* <Link to="/training">
               <button className="training-button">View Training</button>

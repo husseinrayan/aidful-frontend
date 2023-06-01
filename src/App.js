@@ -22,6 +22,7 @@ import DashboardCategories from "./pages/DashboardCategories/DashboardCategories
 import HeaderPage from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Spinner from "./components/spinner/spinner";
+import AddPostPage from "./pages/add-post-page/AddPostPage";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,6 +79,7 @@ function App() {
                 <Route path="products" element={<ProductsPage />} />
                 <Route path="training" element={<TrainingPage />} />
                 <Route path="contact" element={<ContactUsPage />} />
+                <Route path="add-posts" element={<AddPostPage />} />
                 <Route path="*" element={<NotFound />} />
                 <Route path="unauthorized" element={<Unauthorized />} />
               </Route>

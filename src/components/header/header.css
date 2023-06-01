@@ -31,7 +31,7 @@
 .header-logo {
   width: 7rem;
   height: 6rem;
-  margin-top: 7px;
+  margin-top: -22px;
 }
 
 .list {
@@ -146,7 +146,8 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-color);
-  top: 40px;
+  top: 89px;
+  left: 0;
   animation: dropdown_menu_animation 0.5s ease;
   display: none;
 }
