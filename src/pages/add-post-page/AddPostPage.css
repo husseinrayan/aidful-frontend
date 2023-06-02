@@ -1,3 +1,10 @@
 .add-post-page {
     min-height: 100dvh;
 }
+.main-button{
+    color: brown;
+}
+.dashboard-admin-add-button{
+    color: blueviolet;
+    /* background-color: ; */
+}

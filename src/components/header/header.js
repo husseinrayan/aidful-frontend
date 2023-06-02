@@ -459,15 +459,15 @@ const HeaderPage = (props) => {
         {/* <div className="right-space"></div> */}
       </div>
       {userProfile && (
-        <DashboardPopUp
+        <DashboardPopUp 
           onClick={() => {
             setUserProfile(false);
             setUserEditProfileData(false);
           }}
-          title="User Profile"
+          title="User Profile" 
           onSubmit={editUserProfileData}
         >
-          <div
+          <div  
             onClick={() => {
               Cookies.remove("user-token");
               Cookies.remove("user-id");
@@ -490,8 +490,8 @@ const HeaderPage = (props) => {
               <span>{prod.category[0].name}</span>
             </div>
           ))}
-          <div>
-            <button onClick={() => navigate('/add-posts')}>Add Post</button>
+          <div >
+            <button style={{padding: "1rem 2rem",marginRight:"10px",marginTop:"90px"  ,backgroundColor: "#b7d784" }} onClick={() => navigate('/add-posts')}>Add Post</button>
           </div>
         </DashboardPopUp>
       )}

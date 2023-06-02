@@ -48,6 +48,7 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
+  color:#b7d784;
 }
 
 .dashboard-admin-select {

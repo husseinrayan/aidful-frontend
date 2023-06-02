@@ -26,7 +26,7 @@ function DashboardProducts() {
     name: "",
     description: "",
     image: null,
-    price: "",
+    // price: "",
     category: [],
     user: userId
   });
@@ -35,7 +35,7 @@ function DashboardProducts() {
     name: "",
     description: "",
     image: null,
-    price: "",
+    // price: "",
     category: "",
     user: userId
   });
@@ -81,7 +81,8 @@ function DashboardProducts() {
     },
     { field: "name", headerName: "Name", width: 200 },
     { field: "description", headerName: "Description", width: 300 },
-    { field: "price", headerName: "Price", width: 60 },
+    // { field: "price", headerName: "Price", width: 60 },
+  
     {
       field: "category",
       headerName: "Category",
@@ -175,7 +176,7 @@ function DashboardProducts() {
     const productAddForm = new FormData();
     productAddForm.append("name", productAddData.name);
     productAddForm.append("description", productAddData.description);
-    productAddForm.append("price", productAddData.price);
+    // productAddForm.append("price", productAddData.price);
     productAddForm.append("image", productAddData.image);
     productAddForm.append("category", productAddData.category._id);
     productAddForm.append("user", productAddData.user);
@@ -222,7 +223,7 @@ function DashboardProducts() {
     const productEditForm = new FormData();
     productEditForm.append("name", productEditData.name);
     productEditForm.append("description", productEditData.description);
-    productEditForm.append("price", productEditData.price);
+    // productEditForm.append("price", productEditData.price);
     productEditForm.append("image", productEditData.image);
     productEditForm.append("category", productEditData.category._id);
     productEditForm.append("user", productEditData.user);
@@ -269,7 +270,7 @@ function DashboardProducts() {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "var(--secondary-color)",
+      confirmButtonColor: "black",
       cancelButtonColor: "var(--accent-color)",
       confirmButtonText: "Yes, delete it!",
     }).then(async (result) => {
@@ -356,16 +357,16 @@ function DashboardProducts() {
               }
             />
           </div>
-          <div>
+          {/* <div>
             <TextField
-              label="price"
+              // label="price"
               type="number"
               style={{ width: "100%", fontSize: "1rem" }}
-              name="price"
+              // name="price"
               onChange={isEdit ? handleEditChange : handleFormChange}
-              value={isEdit ? productEditData.price : productAddData.price}
+              // value={isEdit ? productEditData.price : productAddData.price}
             />
-          </div>
+          </div> */}
           <div>
             <label>
               Category
@@ -454,7 +455,7 @@ function DashboardProducts() {
         <div className="dashboard-admin-add-button">
           <MainButton
             name="Add Product"
-            style={{ padding: "1rem 2rem" }}
+            style={{ padding: "1rem 2rem" , backgroundColor: "#b7d784" }}
             onClick={async () => {
               await getCategories();
               setOpenPopup(true);
