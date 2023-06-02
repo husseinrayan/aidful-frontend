@@ -37,12 +37,12 @@ const Footer = () => {
               </NavLink>
             </div>
 
-            <div className="footer-categories">
+            {/* <div className="footer-categories">
               <h3>Categories</h3>
               <ul>
                 <li>
-                  <NavLink to="/category1" className="footer-link">
-                    Category 1
+                  <NavLink to="/product" className="footer-link">
+                    Toys
                   </NavLink>
                 </li>
                 <li>
@@ -61,7 +61,7 @@ const Footer = () => {
                   </NavLink>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div className="footer-responsive-bottom-side">

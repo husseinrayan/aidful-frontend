@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import image from "../../images/image3.png";
+import image from "../../images/r1.jpg";
 import { Link } from "react-router-dom";
 import ArrowRightAltRoundedIcon from "@mui/icons-material/ArrowRightAltRounded";
 
