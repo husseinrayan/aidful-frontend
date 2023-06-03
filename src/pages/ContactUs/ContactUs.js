@@ -28,36 +28,36 @@ const ContactUs = () => {
   };
 
 
- const handleSubmit = () => {
-     
-            emailjs
-                .send(
-                    "service_wmgross",
-                    "template_xwg1yza",
-                    data,
-                    "9OjDgZm0R8Ay3HZNj"
-                )
-                .then(
-                    (response) => {
-                        // Swal({
-                        //     title: 'Success',
-                        //     text: 'The Report was sent successfully!',
-                        //     icon: 'success',
-                        // });
-                        // alert('send it succesfull')
-                        console.log(response);
-                    },
-                    (error) => {
-                        // Swal({
-                        //     title: 'Error',
-                        //     text: 'There was an error sending the email. Please try again later.',
-                        //     icon: 'error',
-                        // });
-                        console.log(error);
-                    }
-                );
-       
-    };
+  const handleSubmit = () => {
+    emailjs
+      .send(
+        "service_wmgross",
+        "template_xwg1yza",
+        data,
+        "9OjDgZm0R8Ay3HZNj"
+      )
+      .then(
+        (response) => {
+          Swal.fire({
+            title: "Success",
+            text: "The Report was sent successfully!",
+            icon: "success",
+          });
+          setData({
+            email: "",
+            name: "",
+            message: "",
+          });
+        },
+        (error) => {
+          Swal.fire({
+            title: "Error",
+            text: "There was an error sending the email. Please try again later.",
+            icon: "error",
+          });
+        }
+      );
+  };
 
 
   //   const timer = setTimeout(() => {
