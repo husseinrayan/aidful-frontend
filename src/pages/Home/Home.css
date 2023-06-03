@@ -41,13 +41,11 @@
 }
 
 .home-page-about-paragraph {
-  text-align: justify;
   font-size: 1.4rem;
   line-height: 1.4;
   color: #444;
   width: 40%;
-  /* margin-top: 0; */
-  /* background-color: aqua; */
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .carousel__item img {
@@ -133,7 +131,6 @@
 }
 
 .training {
-  text-align: justify;
   font-size: 1.4rem;
   line-height: 1.4;
   color: #444;
@@ -166,7 +163,7 @@
   height: 80px;
 } */
 .carousel {
-  height: 45vh;
+  height: 43vh;
   /* max-height: 90vh; */
 }
 

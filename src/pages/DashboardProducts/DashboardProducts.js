@@ -12,6 +12,7 @@ import DashboardHeroSection from "../../components/DashboardHeroSection/Dashboar
 import DashboardPopUp from "../../components/DashboardPopUp/DashboardPopUp";
 import "./DashboardProducts.css";
 import Spinner from "../../components/spinner/spinner";
+import Cookies from "js-cookie";
 
 function DashboardProducts() {
   const [data, setData] = useState([]);
@@ -32,7 +33,9 @@ function DashboardProducts() {
     description: "",
     image: null,
     // price: "",
-    category: "",
+    category: ""
+
+
   });
   const [isEdit, setIsEdit] = useState(false);
 
@@ -162,21 +165,14 @@ function DashboardProducts() {
     const productAddForm = new FormData();
     productAddForm.append("name", productAddData.name);
     productAddForm.append("description", productAddData.description);
-    // productAddForm.append("price", productAddData.price);
     productAddForm.append("image", productAddData.image);
     productAddForm.append("category", productAddData.category._id);
-
+    productAddForm.append("user", Cookies.get("user-id")); // Add the user ID from cookies
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/product`,
-        productAddForm,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
+        productAddForm
       );
-
       setIsSubmitting(false);
       setOpenPopup(false);
       Swal.fire({
@@ -322,7 +318,7 @@ function DashboardProducts() {
               name="name"
               autoFocus={isEdit ? true : false}
               onChange={isEdit ? handleEditChange : handleFormChange}
-              value={isEdit ? productEditData.name : productAddData.name}
+              // value={isEdit ? productEditData.name : productAddData.name}
             />
           </div>
           <div>
@@ -339,27 +335,18 @@ function DashboardProducts() {
               }
             />
           </div>
-          <div>
-            <TextField
-              // label="price"
-              type="number"
-              style={{ width: "100%", fontSize: "1rem" }}
-              // name="price"
-              onChange={isEdit ? handleEditChange : handleFormChange}
-              // value={isEdit ? productEditData.price : productAddData.price}
-            />
-          </div>
+
           <div>
             <label>
               Category
               <select
                 className="dashboard-admin-select"
                 name="category"
-                value={
-                  isEdit
-                    ? productEditData.category.name
-                    : productAddData.category.name
-                } // or formData.category.name
+                // value={
+                //   isEdit
+                //     ? productEditData?.category.name
+                //     : productAddData?.category.name
+                // } // or formData.category.name
                 onChange={
                   isEdit
                     ? (e) =>
@@ -421,6 +408,7 @@ function DashboardProducts() {
               name={isEdit ? "Edit" : "Add"}
               style={{ width: "100%", padding: "1rem 0" }}
               type="submit"
+              onClick={addProduct}
             />
             {isSubmitting && (
               <Spinner

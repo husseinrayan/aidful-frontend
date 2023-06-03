@@ -132,7 +132,7 @@ const Products = () => {
             setProducts(response.data.items);
             countNUmberPages(response.data.totalPages);
             setTotalPages(response.data.totalPages);
-            // console.log(response.data.items);
+            console.log(response);
             // console.log(products[0]._id)
           }
         },
@@ -209,7 +209,7 @@ const Products = () => {
                 category={element.category.name}
                 key={element._id}
                 id={element._id}
-
+                element={element}
                 addProducts={handleAddProducts}
                 show={handleShowProduct}
                 onClickTake={() => setIsTaken(element._id)}

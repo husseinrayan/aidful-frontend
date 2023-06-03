@@ -9,6 +9,7 @@ import {
   FaAlignJustify,
   FaAlignCenter,
 } from "react-icons/fa";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import "./header.css";
 import Cookies from "js-cookie";
 import AccountRoundedIcon from "@mui/icons-material/AccountCircle";
@@ -17,9 +18,10 @@ import DashboardPopUp from "../DashboardPopUp/DashboardPopUp";
 import TextField from "../text-field/text-field";
 import MainButton from "../button/button";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
+import { style } from "@mui/system";
 
 const HeaderPage = (props) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const isUserAuthenticated = Cookies.get("user-token");
   const isAdminAuthenticated = Cookies.get("admin-token");
 
@@ -190,7 +192,9 @@ const HeaderPage = (props) => {
 
   const getProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:5001/api/product");
+      const response = await axios.get(
+        "https://aidfull-app-api.onrender.com/api/product"
+      );
       console.log(response);
       setProducts(response.data.items);
     } catch (e) {
@@ -207,8 +211,7 @@ const HeaderPage = (props) => {
       {console.log(filteredProducts)}
       <div className="wrapp">
         {/* <div className="left-space"></div> */}
-          <img className="header-logo" src={logo} width="2rem" height="2rem" />
-        
+        <img className="header-logo" src={logo} width="2rem" height="2rem" />
 
         <ul className="list">
           <li>
@@ -327,13 +330,7 @@ const HeaderPage = (props) => {
             </div>
           </li>
         </ul>
-        {/* <div className="center-space"></div> */}
-        {/* <div className="main-cart">
-          <NavLink to="/order">
-            <button > Donation</button>
-          </NavLink>
-          {findProducts ? <div className="notification"></div> : null}
-        </div> */}
+
         {!open ? (
           <div className="toggle_btn">
             <FaAlignJustify onClick={handelMenuShow} />
@@ -369,17 +366,14 @@ const HeaderPage = (props) => {
               </NavLink>
             </li>
             <li>
-            
-            
               <NavLink
-
                 className="link"
                 to="/training"
                 href="#hero"
                 onClick={handelMenuHidden}
                 style={({ isActive }) => (isActive ? activeStyle : undefined)}
               >
-               Donation
+                Donation
               </NavLink>
             </li>
             <li>
@@ -459,15 +453,15 @@ const HeaderPage = (props) => {
         {/* <div className="right-space"></div> */}
       </div>
       {userProfile && (
-        <DashboardPopUp 
+        <DashboardPopUp
           onClick={() => {
             setUserProfile(false);
             setUserEditProfileData(false);
           }}
-          title="User Profile" 
+          title="User Profile"
           onSubmit={editUserProfileData}
         >
-          <div  
+          <div
             onClick={() => {
               Cookies.remove("user-token");
               Cookies.remove("user-id");
@@ -476,22 +470,53 @@ const HeaderPage = (props) => {
           >
             <LogoutRoundedIcon />
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <span>Name</span>
-            <span>Description</span>
-            <span>IsTaken</span>
-            <span>Category</span>
-          </div>
-          {filteredProducts.map((prod) => (
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <span>{prod.name}</span>
-              <span>{prod.description}</span>
-              <span>{`${prod.isTaken}`}</span>
-              <span>{prod.category[0].name}</span>
-            </div>
-          ))}
-          <div >
-            <button style={{padding: "1rem 2rem",marginRight:"10px",marginTop:"90px"  ,backgroundColor: "#b7d784" }} onClick={() => navigate('/add-posts')}>Add Post</button>
+          <TableContainer>
+  <Table>
+    <TableHead>
+      <TableRow>
+        <TableCell>Name</TableCell>
+        <TableCell>Description</TableCell>
+        <TableCell>IsTaken</TableCell>
+        <TableCell>Category</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      {filteredProducts.map((prod) => (
+        <TableRow key={prod.name}>
+          <TableCell>
+            <img
+              src={`https://aidfull-app-api.onrender.com/uploads/${prod.image}`}
+              alt={prod.name}
+              style={{
+                width: "100%",
+                height: "auto",
+                maxHeight: "100px",
+                objectFit: "contain",
+              }}
+            />
+          </TableCell>
+          <TableCell>{prod.name}</TableCell>
+          <TableCell>{prod.description}</TableCell>
+          <TableCell>{`${prod.isTaken}`}</TableCell>
+          <TableCell>{prod.category[0].name}</TableCell>
+        </TableRow>
+      ))}
+    </TableBody>
+  </Table>
+</TableContainer>
+
+          <div>
+            <button
+              style={{
+                padding: "1rem 2rem",
+                marginRight: "10px",
+                marginTop: "90px",
+                backgroundColor: "#b7d784",
+              }}
+              onClick={() => navigate("/add-posts")}
+            >
+              Add Post
+            </button>
           </div>
         </DashboardPopUp>
       )}

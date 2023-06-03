@@ -110,10 +110,11 @@ function DashboardAdmins() {
   const addAdmin = async (e) => {
     e.preventDefault();
     const adminAddForm = {
-      full_name: adminAddData.fullName,
+      fullName: adminAddData.fullName,
       email: adminAddData.email,
       password: adminAddData.password,
     };
+    console.log(adminAddData);
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_URL}/api/admin/register`,
