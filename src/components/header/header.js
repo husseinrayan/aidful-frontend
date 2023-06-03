@@ -474,6 +474,7 @@ const HeaderPage = (props) => {
   <Table>
     <TableHead>
       <TableRow>
+        <TableCell></TableCell>
         <TableCell>Name</TableCell>
         <TableCell>Description</TableCell>
         <TableCell>IsTaken</TableCell>
