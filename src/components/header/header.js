@@ -36,11 +36,11 @@ const HeaderPage = (props) => {
   const [userProfileData, setUserProfileData] = useState([]);
   const [userEditProfileData, setUserEditProfileData] = useState(false);
   const [editUserData, setEditUserData] = useState({
-    fullName: "",
-    address: "",
-    phoneNumber: "",
-    email: "",
-    password: "",
+  //   Name: "",
+  // Description: "",
+  //  IsTaken: "",
+  //   Category: "",
+    // password: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [displayError, setDisplayError] = useState(false);
@@ -468,6 +468,7 @@ const HeaderPage = (props) => {
               setUserProfile(false);
             }}
           >
+
             <LogoutRoundedIcon />
           </div>
           <TableContainer>
@@ -496,6 +497,7 @@ const HeaderPage = (props) => {
               }}
             />
           </TableCell>
+          {/* <TableCell>{prod.image}</TableCell> */}
           <TableCell>{prod.name}</TableCell>
           <TableCell>{prod.description}</TableCell>
           <TableCell>{`${prod.isTaken}`}</TableCell>
