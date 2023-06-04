@@ -6,6 +6,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import ShowProduct from "./ShowProduct/ShowProduct";
 import "./Products.css";
+import { Token } from "@mui/icons-material";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -26,6 +27,8 @@ const Products = () => {
 
   useEffect(() => {
     setIsMounted(true);
+    const token=localStorage.getItem("user-token")
+    console.log("malak")
   }, []);
 
   useEffect(() => {
@@ -215,6 +218,7 @@ const Products = () => {
                 onClickTake={() => setIsTaken(element._id)}
                 onClickIsNotTake={() => setIsNotTaken(element._id)}
                 taken={element.isTaken}
+
               />
             ))}
           </div>

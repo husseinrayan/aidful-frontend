@@ -30,6 +30,7 @@ function HomePage() {
 
   useEffect(() => {
     getProducts();
+    console.log("malak")
   }, []);
 
   const responsive = {

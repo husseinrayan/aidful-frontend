@@ -5,7 +5,7 @@
 .footer {
   background-color: #b7d784;
   /* background-color: #c35cf2; */
-  color:#222;
+  /* color:#222; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -71,14 +71,17 @@
 .footer-link {
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
   text-decoration: none;
   transition: color 0.3s ease-in-out;
   padding: 0.5rem 0;
+  color: black ;
+  /* font-size: medium; */
+  /* font-weight: bold; */
 }
 
 .footer-link:hover {
-  color: #222;
+  color:white;
 }
 
 .footer-categories {
@@ -179,10 +182,11 @@
   color: var(--accent-color);
   text-decoration: none;
   transition: color 0.3s ease-in-out;
+  /* font-weight: bold; */
 }
 
 .footer-contact a:hover {
-  color: #222;
+  color: white;
 }
 
 .contact-link {

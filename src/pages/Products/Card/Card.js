@@ -4,6 +4,17 @@ import { FaCartPlus } from "react-icons/fa";
 
 const Card = (props) => {
   const [showProduct, setShowProduct] = useState(false);
+  const [token,settoken]=useState(false);
+  useEffect(() => {
+    const getToken=localStorage.getItem("user-id")
+    if(getToken >0){
+    
+      settoken(true)
+    }
+    console.log(token)
+  // settoken(getToken)
+  }, [ token]);
+
   console.log(props.image);
   return (
     <div className="container" style={props.style}>
@@ -19,13 +30,14 @@ const Card = (props) => {
           <h3>{props.name}</h3>
           
         </div>
-        <div className="product-take-btn">
+        {token?(<div className="product-take-btn">
           {props.taken ? (
             <button onClick={props.onClickIsNotTake}>Revert</button>
             ) : (
               <button onClick={props.onClickTake}>Take</button>
           )}
-        </div>
+        </div>):null}
+        
       </div>
     </div>
   );
