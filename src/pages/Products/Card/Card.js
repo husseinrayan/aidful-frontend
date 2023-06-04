@@ -13,10 +13,6 @@ const Card = (props) => {
           onClick={() => props.show(true, props.id)}
         ></div>
         <img src={props.image} alt="product-card" />
-        {/* <FaCartPlus
-          className="add-button"
-          onClick={() => props.addProducts(props.id)}
-        /> */}
       </div>
       <div className="body-card">
         <div className="info-card">
