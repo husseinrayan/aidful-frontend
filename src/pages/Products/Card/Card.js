@@ -21,7 +21,7 @@ const Card = (props) => {
       <div className="body-card">
         <div className="info-card">
           <h3>{props.name}</h3>
-          {/* <h4>{props.price}$</h4> */}
+          
         </div>
         <div className="product-take-btn">
           {props.taken ? (
