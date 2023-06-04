@@ -13,6 +13,7 @@ const Card = (props) => {
     }
     console.log(token)
   // settoken(getToken)
+  //ghj
   }, [ token]);
 
   console.log(props.image);
