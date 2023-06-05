@@ -115,19 +115,19 @@ const HeaderPage = (props) => {
     setDataAllProducts(allProducts);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     if (scrollPosition > 10) {
+  //       setIsScrolled(true);
+  //     } else {
+  //       setIsScrolled(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   const UserProfileId = Cookies.get("user-id");
 
@@ -469,7 +469,7 @@ const HeaderPage = (props) => {
               setUserProfile(false);
             }}
           >
-
+            {/* blhkjbkjbkjbk */}
             <LogoutRoundedIcon />
           </div>
           <TableContainer>
