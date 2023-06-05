@@ -15,14 +15,12 @@
   /* height: 40vh; */
   
 }
-
 .footer-main {
   flex: 3;
   display: flex;
   align-items: flex-start;
   gap: 2rem;
 }
-
 .footer-main h2 {
   margin-right: 2rem;
 }
