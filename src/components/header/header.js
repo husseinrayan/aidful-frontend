@@ -465,6 +465,7 @@ const HeaderPage = (props) => {
             onClick={() => {
               Cookies.remove("user-token");
               Cookies.remove("user-id");
+              localStorage.removeItem("user-token")
               setUserProfile(false);
             }}
           >

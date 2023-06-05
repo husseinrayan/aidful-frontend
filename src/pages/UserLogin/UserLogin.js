@@ -119,8 +119,9 @@ const UserLoginPage = () => {
 
       console.log(response);
 
-      if (response.status == 200) {
+      if (response.status === 200) {
         const oneWeek = 7 * 24 * 60 * 60 * 1000;
+        localStorage.setItem("user-token",response.data.token)
         Cookies.set("user-token", response.data.token, {
           expires: oneWeek,
         });
