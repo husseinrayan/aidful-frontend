@@ -67,7 +67,7 @@ const Footer = () => {
           <div className="footer-responsive-bottom-side">
             <div className="footer-social-media">
               <h3>Follow Us</h3>
-              <ul style={{display:"flex", justifyContent:"space-around"}}>
+              <ul style={{display:"flex", gap: '1rem'}}>
                 <li>
                   <a
                     href="https://www.facebook.com/profile.php?id=100092553177679"

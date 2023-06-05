@@ -20,6 +20,7 @@
   flex: 3;
   display: flex;
   align-items: flex-start;
+  gap: 2rem;
 }
 
 .footer-main h2 {
